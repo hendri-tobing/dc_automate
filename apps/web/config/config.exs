@@ -7,13 +7,10 @@
 # General application configuration
 use Mix.Config
 
-config :web,
-  ecto_repos: [Web.Repo]
-
 # Configures the endpoint
 config :web, WebWeb.Endpoint,
   url: [host: "localhost"],
-  secret_key_base: "GmSvl0WLtlkt2qLYQdc2C+Ex30l4OOzamAy6PxqqaH2OQgR5DPj9djgUbyBvS0X9",
+  secret_key_base: "K9SHIor9KmMy9uIqgJs6RXRniAMP5//6ULYhHTWQabmpvgDkf+/wka9EO2dnIt1d",
   render_errors: [view: WebWeb.ErrorView, accepts: ~w(html json)],
   pubsub: [name: Web.PubSub, adapter: Phoenix.PubSub.PG2]
 
@@ -24,6 +21,13 @@ config :logger, :console,
 
 # Use Jason for JSON parsing in Phoenix
 config :phoenix, :json_library, Jason
+
+config :web,
+  ecto_repos: [Db.Repo]
+
+# Configure phoenix generators
+config :phoenix, :generators,
+  migration: false
 
 # Import environment specific config. This must remain at the bottom
 # of this file so it overrides the configuration defined above.

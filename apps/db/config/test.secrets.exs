@@ -1,0 +1,5 @@
+config :db, Db.Repo,
+  database: "dc_automate_test",
+  username: "postgres",
+  password: "",
+  hostname: "localhost",
